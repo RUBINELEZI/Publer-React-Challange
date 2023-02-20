@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.resizableTable {
+  overflow: auto;
+  background-color: #e3e5e8;
+  padding: 1rem;
+  cursor: default;
+}
+
+thead {
+  color: #7c7c7c;
+}
+
+.resizableTable table {
+  border-collapse: separate;
+  width: 100%;
+  color: rgba(0, 0, 0, 78%);
+  table-layout: fixed;
+}
+.resizableTable table th,
+.resizableTable table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.resizableTable table th {
+  border-bottom: 2px solid #7c7c7c;
+  background-color: #ffffff;
+}
+
+.resizableTable table tr {
+  background-color: #ffffff;
+}
+
+/*Dropdwon*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 50px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  white-space: nowrap;
+  border-radius: 8px;
+  right: 10px;
+}
+
+.dropdownOpen {
+  display: block;
+}
+
+.dropdownClose {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.actionSelection {
+  padding: 5px;
+}
+
+.redColor {
+  color: #e62498;
+}
+
+.actionSelection:hover {
+  background-color: #ffffff;
+}
+
+.nameColumn {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.nameColumn span {
+  padding: 10px;
+}
+
+.resizableTable {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 20px;
+}
+
+thead {
+  display: none;
+}
+
+tbody {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+tr {
+  display: block;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+tr:last-child {
+  margin-bottom: 0;
+}
+
+td {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 10px 0;
+  border-bottom: none;
+}
+
+td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+td:last-child:before {
+  content: none;
+}
+
+@media (min-width: 768px) {
+  .resizableTable {
+    overflow-x: hidden;
+  }
+
+  table {
+    width: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 20px;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tbody {
+    display: table-row-group;
+    margin: 0;
+    padding: 0;
+  }
+
+  tr {
+    display: table-row;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  td {
+    display: table-cell;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.2;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  td:before {
+    content: "";
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  tr {
+    position: relative;
+  }
+
+  td:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
