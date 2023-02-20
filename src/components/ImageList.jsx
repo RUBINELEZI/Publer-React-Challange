@@ -57,7 +57,7 @@ const ImageList = ({ images, brand, text }) => {
             )}
             <img
               src={image || "/publer.png"}
-              alt="base image"
+              alt="base"
               style={{
                 width: "50px",
                 height: "50px",
@@ -68,7 +68,7 @@ const ImageList = ({ images, brand, text }) => {
             {brand && (
               <img
                 src={brandLogo}
-                alt="brand image"
+                alt="brand"
                 style={{
                   position: "absolute",
                   bottom: 0,
