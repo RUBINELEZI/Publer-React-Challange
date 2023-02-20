@@ -7,7 +7,7 @@ function Table({ data, columns }) {
         <thead>
           <tr>
             {columns.map((item, index) => (
-              <TableHeadItem item={item} key={index.id} />
+              <TableHeadItem item={item} key={index} />
             ))}
           </tr>
         </thead>
@@ -16,7 +16,7 @@ function Table({ data, columns }) {
             <TableRow
               item={item}
               columns={columns}
-              key={index.id}
+              key={index}
               rowIndex={index}
             />
           ))}
@@ -35,7 +35,7 @@ function TableRow({ item, columns }) {
     <tr>
       {columns.map((column, index) => {
         return (
-          <td key={index.id}>
+          <td key={index}>
             {column.render
               ? column.render(column, item)
               : item[`${column.value}`]}

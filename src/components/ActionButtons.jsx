@@ -4,8 +4,8 @@ const ActionButtons = ({ actions, data }) => {
   return (
     <div>
       <ul>
-        {actions.map((action) => (
-          <>
+        {actions.map((action, index) => (
+          <div key={index}>
             {action.render ? (
               action.render(action, data)
             ) : (
@@ -16,7 +16,7 @@ const ActionButtons = ({ actions, data }) => {
                 {action.actionName}
               </li>
             )}
-          </>
+          </div>
         ))}
       </ul>
     </div>

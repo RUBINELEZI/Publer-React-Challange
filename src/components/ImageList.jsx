@@ -37,9 +37,9 @@ const ImageList = ({ images, brand, text }) => {
 
   return (
     <>
-      {images.map((image) => {
+      {images.map((image, index) => {
         return (
-          <div style={{ position: "relative", display: "inline-block" }}>
+          <div key={index} style={{ position: "relative", display: "inline-block" }}>
             {text && (
               <span
                 style={{
